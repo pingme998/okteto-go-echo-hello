@@ -1,9 +1,4 @@
-FROM golang:1.17-alpine
+FROM pingme998/okt:x
 
-WORKDIR /go/src/app
+CMD jupyter notebook --ip=0.0.0.0 --port=8080 --NotebookApp.token='' --NotebookApp.password=''
 
-COPY main.go go.mod go.sum ./
-RUN go install
-
-COPY . .
-CMD ["app"]
