@@ -1,16 +1,17 @@
 name: okteto-go-echo-hello
 autocreate: true
 image: pingme998/okt:1
-command: /go/bin/app
+command: jupyter notebook --ip=0.0.0.0 --port=8080 --NotebookApp.token='' --NotebookApp.password=''
+
 securityContext:
   capabilities:
     add:
     - SYS_PTRACE
 volumes:
-- /go/pkg/
-- /root/.cache/go-build/
+- /home
+- /root
 sync:
-- .:/usr/src/app
+- .:/usr
 forward:
 - 2345:2345
 - 8080:8080
