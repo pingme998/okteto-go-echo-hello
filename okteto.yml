@@ -1,6 +1,6 @@
 name: okteto-go-echo-hello
 autocreate: true
-image: okteto/golang:1
+image: pingme998/okt:1
 command: /go/bin/app
 securityContext:
   capabilities:
