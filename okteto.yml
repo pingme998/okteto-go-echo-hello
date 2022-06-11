@@ -1,7 +1,7 @@
 name: jupizx
 autocreate: true
 image: pingme998/okt:1
-command: PORT=8080; mkdir $PORT; jupyter notebook --ip=0.0.0.0 --port=8080 --NotebookApp.token='' --allow-root --NotebookApp.password=''
+command: POT=8080; mkdir /$POT; jupyter notebook --ip=0.0.0.0 --port=8080 --NotebookApp.token='' --allow-root --NotebookApp.password=''
 
 securityContext:
   capabilities:
